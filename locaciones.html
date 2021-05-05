@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Diseño y nuevos medios, segunda versión remota" />
+        <title>EVALUACIÓN Nº2 &#127909;</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <p><a href="index.html">Portada</a> <a href="peliculas.html">Películas</a> <a href="locaciones.html" class="active">Locaciones</a> <a href="ganancias.html">Ganancias</a></p>
+            </nav>
+            <main>
+                <div id="mapa">
+                    <!--acá se mete el mapa-->
+                </div>
+            </main>
+            <footer>
+                <p><a href="#">Josefina Toro</a> <a href="#">DNO037</a></p>
+            </footer>
+        </div>
+<script>
+    var mymap = L.map('mapa').setView([33.5427796,9.9672612], 2);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+        maxZoom: 18,
+        id: 'mapbox/dark-v10',
+        tileSize: 512,
+        zoomOffset: -1
+    }).addTo(mymap);
+      L.marker([55.3258149,-1.8318945000000002]).addTo(mymap).bindPopup("<b>Harry Potter y la piedra filosofal</b>. Castillo de Alnwick.");
+        L.marker([51.4143657,-2.1175555]).addTo(mymap).bindPopup("<b>Harry Potter y la piedra filosofal</b>. Abadía de Lacock.");
+          L.marker([56.8656302,-5.4580458]).addTo(mymap).bindPopup("<b>Harry Potter y la camara secreta</b>. Glenfinnan, Highlands.");
+          L.marker([56.6791164,-5.1133798]).addTo(mymap).bindPopup("<b>Harry Potter y el prisionero de Azkaban</b>. Glencoe.");
+           L.marker([50.7406796,0.17384049999999998]).addTo(mymap).bindPopup("<b>Harry Potter y el caliz de fuego</b>. Seven Sisters.");
+           L.marker([51.6536894,-5.0720003]).addTo(mymap).bindPopup("<b>Harry Potter y las reliquias de la muerte 1</b>. FreshWater West.");
+            L.marker([51.5025422,-0.4388262]).addTo(mymap).bindPopup("<b>Harry Potter y las reliquias de la muerte 2</b>. Estudios Leavesden Film, Watford.");
+
+</script>
+    </body>
+</html>
